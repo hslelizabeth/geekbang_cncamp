@@ -1,14 +1,15 @@
 package main
 
 func main() {
-	var a *int
-	*a += 1
-	// DoOperation(1, increase)
-	DoOperation(1, decrease)
+	func() {
+		println("hello world")
+	}()
+	DoOperation(2, increase)
+	DoOperation(2, decrease)
 }
 
-func increase(a, b int) int {
-	return a + b
+func increase(a, b int) {
+	println("decrease result is:", a+b)
 }
 
 func DoOperation(y int, f func(int, int)) {
